@@ -42,6 +42,9 @@ document.getElementById("scrollButton").addEventListener("click", function () {
     });
 
     if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" }); // Przewiń do niej
-    }
+      window.scrollTo({
+          top: nextSection.offsetTop,
+          behavior: "smooth"
+      });
+  }
   });
