@@ -31,20 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //Przewijanie do kolejnej sekcji//
 
 document.getElementById("scrollButton").addEventListener("click", function () {
-    const sections = document.querySelectorAll("section"); // Pobierz wszystkie sekcje
-    const currentScroll = window.scrollY; // Aktualna pozycja przewijania
-    let nextSection = null;
+  const firstSection = document.querySelector(".sekcja1"); // Pobierz pierwszą sekcję
 
-    sections.forEach((section) => {
-      if (section.offsetTop > currentScroll + 50 && !nextSection) {
-        nextSection = section; // Znajdź następną sekcję
-      }
-    });
-
-    if (nextSection) {
-      window.scrollTo({
-          top: nextSection.offsetTop,
-          behavior: "smooth"
-      });
+  if (firstSection) {
+      firstSection.scrollIntoView({ behavior: "smooth" }); // Przewiń do niej
   }
-  });
+});

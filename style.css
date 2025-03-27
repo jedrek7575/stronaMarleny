@@ -539,14 +539,11 @@ color: rgb(112, 112, 112);
     font-size: 4vw;;
   }
 
-  #scrollButton:hover {
-    font-size: 3.5vw !important;
-  }
 }
 
 #scrollButton:hover {
   
-  transform: ;
+  
   background: linear-gradient(45deg, rgb(255, 198, 198),rgb(255, 212, 212));
  
 }
