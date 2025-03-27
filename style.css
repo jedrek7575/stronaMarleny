@@ -1055,12 +1055,13 @@ video {
 
 
   .swiper-button-prev {
-
+    display: none;
     margin-left: 0%;
   }
   
   .swiper-button-next {
     margin-right: 0%;
+    display: none;
   }
 
   video {
