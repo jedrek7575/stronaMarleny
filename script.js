@@ -29,7 +29,7 @@ let observer = new IntersectionObserver(entries => {
           entry.target.classList.remove("visible");
       }
   });
-}, { threshold: 0.7 });
+}, { threshold: 0.3 });
 
 
 
@@ -38,33 +38,6 @@ document.querySelectorAll("p, h1").forEach(el => observer.observe(el));
 
 
 
-
-//otwieranie lightboxa
-
-document.addEventListener("DOMContentLoaded", function() {
-  const items = document.querySelectorAll(".gallery-item");
-  const lightbox = document.querySelector(".lightbox");
-  const lightboxImg = document.querySelector(".lightbox-img");
-  const lightboxCaption = document.querySelector(".lightbox-caption");
-
-
-  items.forEach(item => {
-    item.addEventListener("click", function() {
-      const img = this.querySelector("img");
-      const rozwinText = this.querySelector(".rozwin").innerHTML; // Pobranie tylko tekstu z <p class="rozwin">
-      
-      lightboxImg.src = img.src;
-      lightboxCaption.innerHTML = rozwinText; // W lightboxie pokazuje się tylko tekst <p class="rozwin">
-      lightbox.style.display = "flex";
-    });
-  });
-
-
-  // Zamknięcie lightboxa po kliknięciu
-  lightbox.addEventListener("click", function() {
-    lightbox.style.display = "none";
-  });
-});
 
 //Rozwijanie kontaktu//
 
