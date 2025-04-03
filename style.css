@@ -528,7 +528,7 @@ color: rgb(112, 112, 112);
   padding: 15px;
   
   font-family: arial black;
-  transition: 0.2s ease-in-out;
+ 
   border: 2px solid;
 }
 
@@ -783,6 +783,7 @@ font-family: Arial, Helvetica, sans-serif;
   position: relative;
   z-index: -1;
   float: right;
+  display: flex;
   }
 
   .filmh {
@@ -814,32 +815,62 @@ font-family: Arial, Helvetica, sans-serif;
 
 
 .sekcja3 {
-  height:400vh;
+  height:100vh;
   position: relative;
+  display: flex;
+  float: left;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .f1 {
-  margin-top: 3vw;
-  width: 30vw;
+  width: 55%;
+  height: auto;
+  justify-content: center;
+
 }
 
 .f2 {
-  margin-top: 3vw;
-  padding-left: 5%;
-  transform: scale(120%);
-  width: 30vw;
-  margin-right: 3%;
+  width: 55%;
+  height: auto;
+  margin-top: 10%;
+
 }
 
 .f3 {
+  width: 55%;
+  height: auto;
+  margin-top: 20%;
+  margin-left: 150%;
   position: absolute;
-  z-index: 3;
-  padding-top: 1vw;
-  margin-left: 3%;
-  margin-right: 3%;
-  width: 40vw;
-  z-index: 1;
 }
+@media (max-width:1200px) {
+  .f1 {
+    width: 75%;
+    height: auto;
+    justify-content: center;
+  
+  }
+  
+  .f2 {
+    width: 75%;
+    height: auto;
+    margin-top: 10%;
+  
+  }
+  
+  .f3 {
+    width: 75%;
+    height: auto;
+    margin-top: 10%;
+    margin-left: 0%;
+    position: relative;
+}
+}
+
 
 @media (max-width: 700px) {
 
@@ -927,13 +958,14 @@ font-family: Arial, Helvetica, sans-serif;
   width: 60%;
   height: 100vh;
   background-image: url('s1.jpg'); 
-  background-size: 70%;
+  background-size: 75%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 110% 100%;
+  background-position: 130% 50%;
   position: relative;
   float: right;
   z-index: 1;
+  background-color: black;
 }
 
 .angaze {
