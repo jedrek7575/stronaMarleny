@@ -1,20 +1,26 @@
-// Przełączanie kart
-const tabs = document.querySelectorAll('[data-tab-target]')
-const tabContents = document.querySelectorAll('[data-tab-content]')
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll("[data-tab-target]");
+  const tabContents = document.querySelectorAll("[data-tab-content]");
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.tabTarget)
-    tabContents.forEach(tabContent => {
-      tabContent.classList.remove('active')
-    })
-    tabs.forEach(tab => {
-      tab.classList.remove('active')
-    })
-    tab.classList.add('active')
-    target.classList.add('active')
-  })
-})
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const target = document.querySelector(tab.dataset.tabTarget);
+
+      // Usuwanie aktywnych klas
+      tabContents.forEach(tabContent => tabContent.classList.remove("active"));
+      tabs.forEach(t => t.classList.remove("active"));
+
+      // Dodanie aktywnych klas
+      tab.classList.add("active");
+      target.classList.add("active");
+
+      // Poczekaj na aktualizację DOM, a potem przewiń na górę
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+  });
+});
 
 
 
@@ -85,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const swiper = new Swiper('.swiper', {
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.but-nxt',
+    prevEl: '.but-prev',
   },
 });
