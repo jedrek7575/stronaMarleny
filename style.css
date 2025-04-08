@@ -1080,25 +1080,36 @@ video {
   z-index: 100; 
   border-radius: 25px 0px 0px 25px;
   position: absolute;
-  top: 60%;
+  top: 55%;
   right: 90%;
-  transform: translate(-50%, -50%);
   background: transparent;
   border: none;
+  cursor: pointer;
+  height: auto;
+  transition: .3s ease-in-out;
+  transform: scale(130%);
 }
 
+.but-prev:hover {
+  transform: scale(150%);
+}
 
 .but-nxt {
-  z-index: 100;
+  z-index: 100; 
+  border-radius: 25px 0px 0px 25px;
   position: absolute;
-  top: 60%;
+  top: 55%;
   left: 90%;
-  transform: translate(-50%, -50%);
   background: transparent;
-  padding: 15px;
-  height: 150px;
-  opacity: 1;
   border: none;
+  cursor: pointer;
+  height: auto;
+  transition: .3s ease-in-out;
+  transform: scale(130%);
+}
+
+.but-nxt:hover {
+  transform: scale(150%);
 }
 
 .arrow {
@@ -1106,11 +1117,11 @@ video {
   width: 55px;
   height: 8px;
   background: linear-gradient( rgb(0, 0, 0), rgb(0, 0, 0));
-  transform
   border-radius: 0px;
   transition: .3s ease-in-out;
   border: solid 0.001px;
 }
+
 
 .but-prev .arrow:nth-child(1) {
   transform: rotate(-28deg);
